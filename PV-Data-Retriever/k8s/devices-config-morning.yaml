@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: devices-config-morning
+data:
+  devices.json: |
+    [
+        {
+            "plant_code": "CN506 - Minoan Energy - Sarafali Mandra",
+            "dev_id": "1000000036275626",
+            "dev_name": "Datalogger (SN-2706)/Inverter-1(SN-6027)",
+            "dev_type": "1"
+        },
+        {
+            "plant_code": "CN506 - Minoan Energy - Sarafali Mandra",
+            "dev_id": "1000000036275625",
+            "dev_name": "Datalogger (SN-2706)/Inverter-2(SN-5612)",
+            "dev_type": "1"
+        },
+        {
+            "plant_code": "CN506 - Minoan Energy - Sarafali Mandra",
+            "dev_id": "1000000036275623",
+            "dev_name": "Datalogger (SN-2706)/Inverter-3(SN-6177)",
+            "dev_type": "1"
+        },
+        {
+            "plant_code": "CN506 - Minoan Energy - Sarafali Mandra",
+            "dev_id": "1000000036275627",
+            "dev_name": "Datalogger (SN-2706)/Inverter-4(SN-1984)",
+            "dev_type": "1"
+        },
+        {
+            "plant_code": "CN506 - Minoan Energy - Sarafali Mandra",
+            "dev_id": "1000000036275624",
+            "dev_name": "Datalogger (SN-2706)/Inverter-5(SN-1983)",
+            "dev_type": "1"
+        },
+        {
+            "plant_code": "CN506 - Minoan Energy - Sarafali Mandra",
+            "dev_id": "1000000036275674",
+            "dev_name": "Datalogger (SN-2706)/EMI (SN-2706)",
+            "dev_type": "10"
+        }
+    ]

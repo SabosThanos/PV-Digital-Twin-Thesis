@@ -1,0 +1,26 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: data-retriever-morning
+spec:
+  schedule: "0 8 * * *"  # 8:00 AM daily
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+          - name: job-container
+            image: sabosthanos/pv-data-retriever:1.2
+            envFrom:
+            - secretRef:
+                name: data-retriever-secret
+            volumeMounts:
+            - name: devices-config-morning
+              mountPath: /app/devices.json
+              subPath: devices.json
+              readOnly: true
+          volumes:
+          - name: devices-config-morning
+            configMap:
+              name: devices-config-morning

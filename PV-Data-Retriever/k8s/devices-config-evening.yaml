@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: devices-config-evening
+data:
+  devices.json: |
+    [
+        {
+            "plant_code": "CN448 - Minoan Energy - Gasi",
+            "dev_id": "1000000035111787",
+            "dev_name": "Datalogger (SN-1523)/Inverter-1(SN-4964)",
+            "dev_type": "1"
+        },
+        {
+            "plant_code": "CN448 - Minoan Energy - Gasi",
+            "dev_id": "1000000035111784",
+            "dev_name": "Datalogger (SN-1523)/Inverter-2(SN-4958)",
+            "dev_type": "1"
+        },
+        {
+            "plant_code": "CN448 - Minoan Energy - Gasi",
+            "dev_id": "1000000035111786",
+            "dev_name": "Datalogger (SN-1523)/Inverter-3(SN-4957)",
+            "dev_type": "1"
+        },
+        {
+            "plant_code": "CN448 - Minoan Energy - Gasi",
+            "dev_id": "1000000035111785",
+            "dev_name": "Datalogger (SN-1523)/Inverter-4(SN-4965)",
+            "dev_type": "1"
+        },
+        {
+            "plant_code": "CN506 - Minoan Energy - Sarafali Mandra",
+            "dev_id": "1000000035112051",
+            "dev_name": "Datalogger (SN-1523)/EMI (SN-1523)",
+            "dev_type": "10"
+        }
+    ]

@@ -1,0 +1,14 @@
+[
+    {
+        "plant_code": "CN506 - Minoan Energy - Sarafali Mandra",
+        "dev_id": "1000000036275626",
+        "dev_name": "Datalogger (SN-2706)/Inverter-1(SN-6027)",
+        "dev_type": "1"
+    },
+    {
+        "plant_code": "CN506 - Minoan Energy - Sarafali Mandra",
+        "dev_id": "1000000036275674",
+        "dev_name": "Datalogger (SN-2706)/EMI (SN-2706)",
+        "dev_type": "10"
+    }
+]
