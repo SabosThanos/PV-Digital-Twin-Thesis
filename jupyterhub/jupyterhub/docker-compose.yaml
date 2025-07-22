@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  jupyterhub:
+    build: 
+      context: ./build
+      dockerfile: Dockerfile
+    container_name: jupyterhub-gpu
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py
+      - ./work:/home/jovyan/work
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    command: jupyterhub -f /srv/jupyterhub/jupyterhub_config.py
