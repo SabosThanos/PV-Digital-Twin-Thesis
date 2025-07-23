@@ -4,7 +4,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 # Define the directory containing the Excel files
-directory = "./CN448-2025-01/Inverter"
+directory = "./CN448-2025-02/Inverter"
 
 columns_to_keep=[
     "Site Name",
@@ -54,8 +54,10 @@ rename_dict = {
     "Internal temperature(℃)": "temperature"
 }
 
-# PostgreSQL Connection
-engine = create_engine("postgresql://postgres:bhSfWIhKfNGHoE0AZF6grXOqa1UcMAiJnQdQWnW6XqtmFnrsXOGBeCWcxM2kBwA4@127.0.0.1:5432/postgres")
+engine = create_engine(
+    "postgresql://postgres:bhSfWIhKfNGHoE0AZF6grXOqa1UcMAiJnQdQWnW6XqtmFnrsXOGBeCWcxM2kBwA4@127.0.0.1:5432/postgres",
+    isolation_level="AUTOCOMMIT"
+)
 
 # Get all Excel files in the directory
 excel_files = glob.glob(os.path.join(directory, "*.xlsx"))

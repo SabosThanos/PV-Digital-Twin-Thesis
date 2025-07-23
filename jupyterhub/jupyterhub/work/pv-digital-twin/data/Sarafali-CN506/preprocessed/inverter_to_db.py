@@ -4,7 +4,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 # Define the directory containing the Excel files
-directory = "./CN506-2025-01/Inverter"
+directory = "./CN506-2025-02/Inverter"
 
 columns_to_keep=[
     "Site Name",
