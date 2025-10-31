@@ -1,8 +1,5 @@
 FROM jupyterhub/jupyterhub:latest
 
-# Create jovyan user 
-RUN useradd -m jovyan
-
 # Install required packages
 RUN pip install --no-cache-dir \
     jupyterlab \
@@ -10,11 +7,8 @@ RUN pip install --no-cache-dir \
     pandas \
     numpy \
     matplotlib \
-    scikit-learn
-
-# # Install TensorFlow with GPU support
-# RUN pip install --no-cache-dir \
-#     tensorflow[and-cuda]
+    scikit-learn \
+    seaborn
 
 # Install PyTorch with GPU support
 RUN pip install --no-cache-dir \
@@ -32,5 +26,5 @@ RUN pip install --no-cache-dir \
     statsmodels \
     openpyxl
 
-USER jovyan
-WORKDIR /home/jovyan
+USER ubuntu
+WORKDIR /home/ubuntu

@@ -10,7 +10,7 @@ services:
       - "8000:8000"
     volumes:
       - ./jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py
-      - ./work:/home/jovyan/work
+      - ./work:/home/ubuntu/work
     deploy:
       resources:
         reservations:
